@@ -2,9 +2,6 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:online_doctor/src/providers/date_provider.dart';
-import 'package:online_doctor/src/providers/user_provider.dart';
-import 'package:provider/provider.dart';
-//import 'package:traveling/src/providers/TravelProvider.dart';
 
 class PushNotificationService {
   static FirebaseMessaging messaging = FirebaseMessaging.instance;
