@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:online_doctor/src/providers/date_provider.dart';
+import 'package:online_doctor/src/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 //import 'package:traveling/src/providers/TravelProvider.dart';
 
 class PushNotificationService {
@@ -26,8 +29,11 @@ class PushNotificationService {
   static Future initializeApp() async {
     await Firebase.initializeApp();
     token = await messaging.getToken();
-    //final TravelProvider travelProvider = new TravelProvider();
-    //await travelProvider.sendPhoneToken(token ?? '');
+    //final UserProvider userProvider =
+    //    Provider.of<UserProvider>(context, listen: false);
+    //final tokenUser = await userProvider.readToken();
+    final DateProvider dateProvider = new DateProvider();
+    await dateProvider.sendPhoneToken(token ?? '');
 
     FirebaseMessaging.onBackgroundMessage(_backgroundHandler);
     FirebaseMessaging.onMessage.listen(_onMessageHandler);

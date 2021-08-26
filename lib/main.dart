@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:online_doctor/src/providers/user_provider.dart';
 import 'package:online_doctor/src/routes/routes.dart';
+import 'package:online_doctor/src/services/push_notifications_service.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await PushNotificationService.initializeApp();
   runApp(AppState());
 }
 
@@ -33,6 +35,15 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final GlobalKey<NavigatorState> navigatorKey =
       new GlobalKey<NavigatorState>();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    PushNotificationService.messageStream.listen((data) async {
+      print(data);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

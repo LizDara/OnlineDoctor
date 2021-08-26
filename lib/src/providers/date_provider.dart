@@ -46,4 +46,16 @@ class DateProvider {
     }
     return new Cita();
   }
+
+  Future<bool> sendPhoneToken(String token) async {
+    final data = {"token": token};
+    final response = await http.post(Uri.parse('$baseUrl/usuario/firebase/'),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: json.encode(data));
+
+    return true;
+  }
 }
