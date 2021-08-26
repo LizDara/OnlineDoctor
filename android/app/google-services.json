@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "538683523978",
+    "project_id": "elc103-2b762",
+    "storage_bucket": "elc103-2b762.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538683523978:android:9193fc52e97f9d7c5f7e73",
+        "android_client_info": {
+          "package_name": "com.example.online_doctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538683523978-qop2rdj0h7buslbpn17r8um3h34p466v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3nyqw-w5NJF8RY9tI6e0W5lIQ2GmY_v0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538683523978-qop2rdj0h7buslbpn17r8um3h34p466v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

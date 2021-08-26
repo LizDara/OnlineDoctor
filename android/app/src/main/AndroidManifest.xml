@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.online_doctor">
+    package="com.example.online_doctor"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
+        tools:replace="android:label" 
         android:label="online_doctor"
         android:icon="@mipmap/ic_launcher">
         <activity
